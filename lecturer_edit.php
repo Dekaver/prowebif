@@ -5,18 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
     <title>Document</title>
 </head>
 
 <body>
+
     <?php 
-         $mysqli = new mysqli("localhost", "homestead", "secret", "si_akademik");
+         $mysqli = new mysqli("localhost", "root", "", "database");
          
          $sql = "SELECT * FROM dosen where nip='".$_GET['nip']."'";
          $result = $mysqli->query($sql);
          $row = $result->fetch_assoc()
     ?>
     <h1>Edit Data Dosen</h1>
+    <div class="content">
     <form action="lecturer_proses.php" method="post">
         <input type="hidden" name="aksi" value="edit">
         <table>
@@ -60,6 +63,6 @@
             </tr>
         </table>
     </form>
-    
+    </div>
 </body>
 </html>
