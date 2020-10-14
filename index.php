@@ -5,13 +5,17 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/style.css">
 	<title>Document</title>
 </head>
 
 <body>
+	<nav>
+	<a href="index.php">Home</a>	
 	<a href="?f=lecturer_index">Data Dosen</a>
-	<a href="?f=student_index">Data Mahasiswa</a>
-	<a href="?f=subject_index">Data Matakuliah</a>
+		<a href="?f=student_index">Data Mahasiswa</a>
+		<a href="?f=subject_index">Data Matakuliah</a>
+	
 	<?php
 	//memulai session
 	session_start();
@@ -21,10 +25,12 @@
 	//kl variabel $_SESSION["username"] kosong berarti belum login sehingga tdk akan ditampilkan link logout
 	
 	if (isset($_SESSION["username"])) {
-		echo "<a href='?f=logout'>Logout</a>";
+		echo "<a id='logout' href='?f=logout'>Logout</a>";
+	}else{
+		header("Location: login.php");
 	}
 	?>
-
+	</nav>
 	<br>
 
 	<?php
@@ -40,9 +46,13 @@
 			echo 'File Tidak ada</b>';
 		}
 	} else {
-		echo "Selamat Datang di Kelas Proweb IF";
+		echo '<h1>Selamat Datang di Kelas Proweb IF</h1>
+		<div class="content">
+			<img id="homeimg" src="img/home.png" alt="home" >
+		</div>';
 	}
 	?>
+	
 </body>
 
 </html>
