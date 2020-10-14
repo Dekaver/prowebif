@@ -5,12 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Data Dosen</title>
 </head>
 
 <body>
+    
     <h1>Data Dosen</h1>
-    <a href="?f=lecturer_input">Input Data Dosen</a>
+    <div class="content">
+    <a href="?f=lecturer_input">+ Data Dosen</a>
     <br>
     <br>
 
@@ -18,7 +20,7 @@
 	// Cek sudah login atau belum, kalau belum akan diredirect ke page logi. Penjelasan kode ini ada di file index.php
     if (isset($_SESSION["username"])) {
 		//membuat objek mysql
-        $mysqli = new mysqli("localhost", "homestead", "secret", "si_akademik");
+        $mysqli = new mysqli("localhost", "root", "", "database");
 
         //mengecek apakah sudah terkoneksi ke database mysql atau belum
         if (mysqli_connect_errno()) {
@@ -60,6 +62,7 @@
         header("Location: login.php");
     }
     ?>
+    </div>
 </body>
 
 </html>

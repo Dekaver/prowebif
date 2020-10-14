@@ -2,7 +2,7 @@
 //Tempat untuk mengeksekusi semua event baik itu input data, edit data dan hapus data.
 
 //membuat objek database mysql dengan format (link_server, username_mysql, password_mysql, database_mysql)
-$mysqli = new mysqli("localhost", "homestead", "secret", "si_akademik");
+$mysqli = new mysqli("localhost", "root", "", "database");
 
 //setiap request yang datang akan dicek methodnya apakah post atau get. 
 //$_POST['aksi'] valuenya diperoleh dari tag <input type="hidden" value=""> karena kl metod post, data yang dikirim dr suatu form, tdk ditampilkan di url/link.
