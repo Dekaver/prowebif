@@ -1,1 +1,57 @@
-*{border:1px solid red}
+
+body{
+    margin:0px;
+    background-image: repeating-radial-gradient(white,blue);
+}
+nav{
+    background-color:white;
+    
+    height: 50px;
+    border:1px solid rgb(3,33,212)
+}
+nav a{
+    text-decoration: none;
+    display: block;
+    /* height: 40px; */
+    margin:10px;
+    padding: 5px 10px;
+    background-color:rgb(34, 34, 255) ;
+    float: left;
+    border-radius: 5px;
+    color: white;
+}
+nav a:hover{
+    background-color:rgb(15, 15, 250);
+    margin:5px;
+    padding:10px 15px;
+    text-decoration: none;
+    color: white;
+}
+#logout{
+    float:right;
+    background-color: red;
+}
+#login{
+    float:right;
+}
+.left{
+    height: auto;
+    width: 100px;
+    margin-left: 0px;
+    position: fixed;
+    float: left;
+}
+h1{
+    text-align: center;
+}
+.content{
+    height:300px;
+    margin:100px 200px;
+}
+.content img{
+    height:300px;
+}
+
+form{
+    margin: 0px 100px;
+}
